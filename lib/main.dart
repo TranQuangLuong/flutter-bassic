@@ -1,26 +1,12 @@
-import 'package:demo/text.dart';
+import 'package:demo/SignIn.dart';
+import 'package:demo/Will.dart';
+import 'package:demo/text.dart' ;
 import 'package:flutter/material.dart';
 import 'loginScreen.dart';
-void main() => runApp(loginScreen());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'flutter demo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('flutter demo'),
-          
-        ),
-        body: const Center(
-          child: Text('hello'),
-        ),
-      ),
-    );
-  }
-}
-
+import 'package:demo/history.dart';
+void main() => runApp(MaterialApp(
+  home: MyApp(),
+));
 class loginScreen extends StatelessWidget {
 
   @override
@@ -32,11 +18,6 @@ class loginScreen extends StatelessWidget {
     );
   }
 }
-
-
-class text extends StatelessWidget {
-  text(String s, {required TextStyle style});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,4 +26,74 @@ class text extends StatelessWidget {
       home: App(),
     );
   }
+abstract class SigbIn extends StatelessWidget {
+  text(String s, {
+    required TextStyle style
+    }
+    );
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'flutter demo',
+      debugShowCheckedModeBanner: false,
+      home: SignIn(),
+    );
+  }
+}   
+abstract class Wills extends StatelessWidget {
+  text(String s, {
+    required TextStyle style
+    }
+    );
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'flutter demo',
+      debugShowCheckedModeBanner: false,
+      home: Will(),
+    );
+  }
+}   
+abstract class Historys extends StatelessWidget {
+  text(String s, {
+    required TextStyle style
+    }
+    );
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'flutter demo',
+      debugShowCheckedModeBanner: false,
+      home: History(),
+    );
+  }
+} 
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Food App With Navigation',
+      theme: ThemeData( 
+        primarySwatch: Colors.blue
+        ),
+        home: Scaffold(
+          body: Center(
+            child: Text('Food App Whith Navigation',style: TextStyle(fontSize: 30),),
+          ),
+        ),
+    );
+  }
+  
+  
 }
+
+ 
+
+
+
+
+  

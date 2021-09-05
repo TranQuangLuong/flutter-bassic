@@ -1,0 +1,3276 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/demo/widget/widget_email.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/material/checkbox.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/placeholder_span.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_shadow.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/material/input_border.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/annotated_region.dart', 'packages/flutter/src/services/system_chrome.dart', 'packages/flutter/src/painting/gradient.dart', 'packages/flutter/src/widgets/single_child_scroll_view.dart', 'packages/flutter/src/widgets/form.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/painting/image_resolution.dart', 'packages/flutter/src/material/text_form_field.dart', 'packages/flutter/src/material/app.dart'], (function load__packages__demo__loginScreen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__demo__widget__widget_email$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__material__checkbox$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__placeholder_span$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_shadow$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__material__input_border$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__annotated_region$46dart, packages__flutter__src__services__system_chrome$46dart, packages__flutter__src__painting__gradient$46dart, packages__flutter__src__widgets__single_child_scroll_view$46dart, packages__flutter__src__widgets__form$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__painting__image_resolution$46dart, packages__flutter__src__material__text_form_field$46dart, packages__flutter__src__material__app$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const scroll_physics = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_physics;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
+  const widget_email = packages__demo__widget__widget_email$46dart.widget__widget_email;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const theme_data = packages__flutter__src__material__icon_button$46dart.src__material__theme_data;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const checkbox = packages__flutter__src__material__checkbox$46dart.src__material__checkbox;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_span = packages__flutter__src__painting__placeholder_span$46dart.src__painting__text_span;
+  const inline_span = packages__flutter__src__painting__placeholder_span$46dart.src__painting__inline_span;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_shadow = packages__flutter__src__painting__box_shadow$46dart.src__painting__box_shadow;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const input_border = packages__flutter__src__material__input_border$46dart.src__material__input_border;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const annotated_region = packages__flutter__src__widgets__annotated_region$46dart.src__widgets__annotated_region;
+  const system_chrome = packages__flutter__src__services__system_chrome$46dart.src__services__system_chrome;
+  const gradient = packages__flutter__src__painting__gradient$46dart.src__painting__gradient;
+  const single_child_scroll_view = packages__flutter__src__widgets__single_child_scroll_view$46dart.src__widgets__single_child_scroll_view;
+  const form = packages__flutter__src__widgets__form$46dart.src__widgets__form;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const image_resolution = packages__flutter__src__painting__image_resolution$46dart.src__painting__image_resolution;
+  const text_form_field = packages__flutter__src__material__text_form_field$46dart.src__material__text_form_field;
+  const app = packages__flutter__src__material__app$46dart.src__material__app;
+  var loginScreen = Object.create(dart.library);
+  var text$ = Object.create(dart.library);
+  var SignIn = Object.create(dart.library);
+  var main = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    boolN: () => (T.boolN = dart.constFn(dart.nullable(core.bool)))(),
+    boolNTovoid: () => (T.boolNTovoid = dart.constFn(dart.fnType(dart.void, [T.boolN()])))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    JSArrayOfInlineSpan: () => (T.JSArrayOfInlineSpan = dart.constFn(_interceptors.JSArray$(inline_span.InlineSpan)))(),
+    JSArrayOfBoxShadow: () => (T.JSArrayOfBoxShadow = dart.constFn(_interceptors.JSArray$(box_shadow.BoxShadow)))(),
+    AnnotatedRegionOfSystemUiOverlayStyle: () => (T.AnnotatedRegionOfSystemUiOverlayStyle = dart.constFn(annotated_region.AnnotatedRegion$(system_chrome.SystemUiOverlayStyle)))(),
+    JSArrayOfColor: () => (T.JSArrayOfColor = dart.constFn(_interceptors.JSArray$(ui.Color)))(),
+    GlobalKeyOfFormState: () => (T.GlobalKeyOfFormState = dart.constFn(framework.GlobalKey$(form.FormState)))(),
+    StringN: () => (T.StringN = dart.constFn(dart.nullable(core.String)))(),
+    StringNToStringN: () => (T.StringNToStringN = dart.constFn(dart.fnType(T.StringN(), [T.StringN()])))(),
+    VoidTobool: () => (T.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "email",
+        [_Location_column]: 24,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "checkColor",
+        [_Location_column]: 15,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "activeColor",
+        [_Location_column]: 15,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 15,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8], widget_inspector._Location);
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 11,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11, C[12] || CT.C12], widget_inspector._Location);
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 14,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 14,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16], widget_inspector._Location);
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 7,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19], widget_inspector._Location);
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 5,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 5,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23], widget_inspector._Location);
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 10,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 12,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27], widget_inspector._Location);
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30], widget_inspector._Location);
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.constList([C[33] || CT.C33, C[34] || CT.C34], widget_inspector._Location);
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[32] || CT.C32,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 65,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 5,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], widget_inspector._Location);
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 63,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 5,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 5,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 5,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 5,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41, C[42] || CT.C42, C[43] || CT.C43], widget_inspector._Location);
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 10,
+        [_Location_line]: 59,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "text",
+        [_Location_column]: 7,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46], widget_inspector._Location);
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 89,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 5,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 5,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.constList([C[49] || CT.C49, C[50] || CT.C50], widget_inspector._Location);
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[48] || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 10,
+        [_Location_line]: 87,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 10,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 10,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53, C[54] || CT.C54], widget_inspector._Location);
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 123,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 8,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 8,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C[56] = dart.constList([C[57] || CT.C57, C[58] || CT.C58], widget_inspector._Location);
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[56] || CT.C56,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 118,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 6,
+        [_Location_line]: 117,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 6,
+        [_Location_line]: 118,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.constList([C[61] || CT.C61, C[62] || CT.C62], widget_inspector._Location);
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[60] || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 116,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 13,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.constList([C[65] || CT.C65, C[66] || CT.C66], widget_inspector._Location);
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[64] || CT.C64,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 20,
+        [_Location_line]: 149,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.constList([C[69] || CT.C69], widget_inspector._Location);
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[68] || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 149,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 174,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 21,
+        [_Location_line]: 175,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.constList([C[72] || CT.C72, C[73] || CT.C73], widget_inspector._Location);
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[71] || CT.C71,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 173,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "obscureText",
+        [_Location_column]: 14,
+        [_Location_line]: 165,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 15,
+        [_Location_line]: 166,
+        [_Location_file]: null
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 170,
+        [_Location_file]: null
+      });
+    },
+    get C75() {
+      return C[75] = dart.constList([C[76] || CT.C76, C[77] || CT.C77, C[78] || CT.C78], widget_inspector._Location);
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[75] || CT.C75,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 164,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 13,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 13,
+        [_Location_line]: 152,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 164,
+        [_Location_file]: null
+      });
+    },
+    get C80() {
+      return C[80] = dart.constList([C[81] || CT.C81, C[82] || CT.C82, C[83] || CT.C83, C[84] || CT.C84], widget_inspector._Location);
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[80] || CT.C80,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 7,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C86() {
+      return C[86] = dart.constList([C[87] || CT.C87, C[88] || CT.C88], widget_inspector._Location);
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[86] || CT.C86,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 137,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 223,
+        [_Location_file]: null
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 24,
+        [_Location_line]: 224,
+        [_Location_file]: null
+      });
+    },
+    get C90() {
+      return C[90] = dart.constList([C[91] || CT.C91, C[92] || CT.C92], widget_inspector._Location);
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[90] || CT.C90,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 222,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 31,
+        [_Location_line]: 231,
+        [_Location_file]: null
+      });
+    },
+    get C94() {
+      return C[94] = dart.constList([C[95] || CT.C95], widget_inspector._Location);
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[94] || CT.C94,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 231,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 31,
+        [_Location_line]: 233,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C[97] = dart.constList([C[98] || CT.C98], widget_inspector._Location);
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[97] || CT.C97,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 233,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 31,
+        [_Location_line]: 235,
+        [_Location_file]: null
+      });
+    },
+    get C100() {
+      return C[100] = dart.constList([C[101] || CT.C101], widget_inspector._Location);
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[100] || CT.C100,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 235,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 31,
+        [_Location_line]: 238,
+        [_Location_file]: null
+      });
+    },
+    get C103() {
+      return C[103] = dart.constList([C[104] || CT.C104], widget_inspector._Location);
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[103] || CT.C103,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 238,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 31,
+        [_Location_line]: 240,
+        [_Location_file]: null
+      });
+    },
+    get C106() {
+      return C[106] = dart.constList([C[107] || CT.C107], widget_inspector._Location);
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[106] || CT.C106,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 240,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C110() {
+      return C[110] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 20,
+        [_Location_line]: 220,
+        [_Location_file]: null
+      });
+    },
+    get C111() {
+      return C[111] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 20,
+        [_Location_line]: 221,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C[109] = dart.constList([C[110] || CT.C110, C[111] || CT.C111], widget_inspector._Location);
+    },
+    get C108() {
+      return C[108] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[109] || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 219,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C114() {
+      return C[114] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "physics",
+        [_Location_column]: 19,
+        [_Location_line]: 213,
+        [_Location_file]: null
+      });
+    },
+    get C115() {
+      return C[115] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 19,
+        [_Location_line]: 214,
+        [_Location_file]: null
+      });
+    },
+    get C116() {
+      return C[116] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 20,
+        [_Location_line]: 219,
+        [_Location_file]: null
+      });
+    },
+    get C113() {
+      return C[113] = dart.constList([C[114] || CT.C114, C[115] || CT.C115, C[116] || CT.C116], widget_inspector._Location);
+    },
+    get C112() {
+      return C[112] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[113] || CT.C113,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 212,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C119() {
+      return C[119] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 16,
+        [_Location_line]: 198,
+        [_Location_file]: null
+      });
+    },
+    get C120() {
+      return C[120] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 16,
+        [_Location_line]: 199,
+        [_Location_file]: null
+      });
+    },
+    get C121() {
+      return C[121] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 16,
+        [_Location_line]: 200,
+        [_Location_file]: null
+      });
+    },
+    get C122() {
+      return C[122] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 212,
+        [_Location_file]: null
+      });
+    },
+    get C118() {
+      return C[118] = dart.constList([C[119] || CT.C119, C[120] || CT.C120, C[121] || CT.C121, C[122] || CT.C122], widget_inspector._Location);
+    },
+    get C117() {
+      return C[117] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[118] || CT.C118,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 197,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C125() {
+      return C[125] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 12,
+        [_Location_line]: 196,
+        [_Location_file]: null
+      });
+    },
+    get C124() {
+      return C[124] = dart.constList([C[125] || CT.C125], widget_inspector._Location);
+    },
+    get C123() {
+      return C[123] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[124] || CT.C124,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 195,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C128() {
+      return C[128] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 10,
+        [_Location_line]: 195,
+        [_Location_file]: null
+      });
+    },
+    get C127() {
+      return C[127] = dart.constList([C[128] || CT.C128], widget_inspector._Location);
+    },
+    get C126() {
+      return C[126] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[127] || CT.C127,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 194,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C131() {
+      return C[131] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 8,
+        [_Location_line]: 193,
+        [_Location_file]: null
+      });
+    },
+    get C132() {
+      return C[132] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 8,
+        [_Location_line]: 194,
+        [_Location_file]: null
+      });
+    },
+    get C130() {
+      return C[130] = dart.constList([C[131] || CT.C131, C[132] || CT.C132], widget_inspector._Location);
+    },
+    get C129() {
+      return C[129] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[130] || CT.C130,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 192,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C135() {
+      return C[135] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 6,
+        [_Location_line]: 192,
+        [_Location_file]: null
+      });
+    },
+    get C134() {
+      return C[134] = dart.constList([C[135] || CT.C135], widget_inspector._Location);
+    },
+    get C133() {
+      return C[133] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[134] || CT.C134,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 191,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/loginScreen.dart"
+      });
+    },
+    get C138() {
+      return C[138] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "image",
+        [_Location_column]: 21,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C137() {
+      return C[137] = dart.constList([C[138] || CT.C138], widget_inspector._Location);
+    },
+    get C136() {
+      return C[136] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[137] || CT.C137,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C141() {
+      return C[141] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 17,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C142() {
+      return C[142] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C140() {
+      return C[140] = dart.constList([C[141] || CT.C141, C[142] || CT.C142], widget_inspector._Location);
+    },
+    get C139() {
+      return C[139] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[140] || CT.C140,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C145() {
+      return C[145] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 28,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C144() {
+      return C[144] = dart.constList([C[145] || CT.C145], widget_inspector._Location);
+    },
+    get C143() {
+      return C[143] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[144] || CT.C144,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C148() {
+      return C[148] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 27,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C149() {
+      return C[149] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C147() {
+      return C[147] = dart.constList([C[148] || CT.C148, C[149] || CT.C149], widget_inspector._Location);
+    },
+    get C146() {
+      return C[146] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[147] || CT.C147,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C152() {
+      return C[152] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 18,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C153() {
+      return C[153] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 14,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C151() {
+      return C[151] = dart.constList([C[152] || CT.C152, C[153] || CT.C153], widget_inspector._Location);
+    },
+    get C150() {
+      return C[150] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[151] || CT.C151,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C156() {
+      return C[156] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 28,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C155() {
+      return C[155] = dart.constList([C[156] || CT.C156], widget_inspector._Location);
+    },
+    get C154() {
+      return C[154] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[155] || CT.C155,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C159() {
+      return C[159] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 25,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C160() {
+      return C[160] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "validator",
+        [_Location_column]: 27,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C161() {
+      return C[161] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLength",
+        [_Location_column]: 27,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C158() {
+      return C[158] = dart.constList([C[159] || CT.C159, C[160] || CT.C160, C[161] || CT.C161], widget_inspector._Location);
+    },
+    get C157() {
+      return C[157] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[158] || CT.C158,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C164() {
+      return C[164] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 11,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C165() {
+      return C[165] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 14,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C166() {
+      return C[166] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 14,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C167() {
+      return C[167] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C163() {
+      return C[163] = dart.constList([C[164] || CT.C164, C[165] || CT.C165, C[166] || CT.C166, C[167] || CT.C167], widget_inspector._Location);
+    },
+    get C162() {
+      return C[162] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[163] || CT.C163,
+        [_Location_name]: null,
+        [_Location_column]: 7,
+        [_Location_line]: 59,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C170() {
+      return C[170] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 18,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C171() {
+      return C[171] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C169() {
+      return C[169] = dart.constList([C[170] || CT.C170, C[171] || CT.C171], widget_inspector._Location);
+    },
+    get C168() {
+      return C[168] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[169] || CT.C169,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C174() {
+      return C[174] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 34,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C173() {
+      return C[173] = dart.constList([C[174] || CT.C174], widget_inspector._Location);
+    },
+    get C172() {
+      return C[172] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[173] || CT.C173,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 100,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C177() {
+      return C[177] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 25,
+        [_Location_line]: 117,
+        [_Location_file]: null
+      });
+    },
+    get C178() {
+      return C[178] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "validator",
+        [_Location_column]: 27,
+        [_Location_line]: 128,
+        [_Location_file]: null
+      });
+    },
+    get C179() {
+      return C[179] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLength",
+        [_Location_column]: 27,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C176() {
+      return C[176] = dart.constList([C[177] || CT.C177, C[178] || CT.C178, C[179] || CT.C179], widget_inspector._Location);
+    },
+    get C175() {
+      return C[175] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[176] || CT.C176,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 116,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C182() {
+      return C[182] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 27,
+        [_Location_line]: 108,
+        [_Location_file]: null
+      });
+    },
+    get C183() {
+      return C[183] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 29,
+        [_Location_line]: 109,
+        [_Location_file]: null
+      });
+    },
+    get C184() {
+      return C[184] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 29,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C185() {
+      return C[185] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 116,
+        [_Location_file]: null
+      });
+    },
+    get C181() {
+      return C[181] = dart.constList([C[182] || CT.C182, C[183] || CT.C183, C[184] || CT.C184, C[185] || CT.C185], widget_inspector._Location);
+    },
+    get C180() {
+      return C[180] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[181] || CT.C181,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 106,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C188() {
+      return C[188] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 19,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C189() {
+      return C[189] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 18,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C190() {
+      return C[190] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C187() {
+      return C[187] = dart.constList([C[188] || CT.C188, C[189] || CT.C189, C[190] || CT.C190], widget_inspector._Location);
+    },
+    get C186() {
+      return C[186] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[187] || CT.C187,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 102,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C193() {
+      return C[193] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 37,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C192() {
+      return C[192] = dart.constList([C[193] || CT.C193], widget_inspector._Location);
+    },
+    get C191() {
+      return C[191] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[192] || CT.C192,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 144,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C196() {
+      return C[196] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "obscureText",
+        [_Location_column]: 26,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C197() {
+      return C[197] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 25,
+        [_Location_line]: 160,
+        [_Location_file]: null
+      });
+    },
+    get C198() {
+      return C[198] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "validator",
+        [_Location_column]: 27,
+        [_Location_line]: 173,
+        [_Location_file]: null
+      });
+    },
+    get C199() {
+      return C[199] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLength",
+        [_Location_column]: 27,
+        [_Location_line]: 180,
+        [_Location_file]: null
+      });
+    },
+    get C195() {
+      return C[195] = dart.constList([C[196] || CT.C196, C[197] || CT.C197, C[198] || CT.C198, C[199] || CT.C199], widget_inspector._Location);
+    },
+    get C194() {
+      return C[194] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[195] || CT.C195,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 158,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C202() {
+      return C[202] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 29,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C203() {
+      return C[203] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 33,
+        [_Location_line]: 152,
+        [_Location_file]: null
+      });
+    },
+    get C204() {
+      return C[204] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 37,
+        [_Location_line]: 153,
+        [_Location_file]: null
+      });
+    },
+    get C205() {
+      return C[205] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 24,
+        [_Location_line]: 158,
+        [_Location_file]: null
+      });
+    },
+    get C201() {
+      return C[201] = dart.constList([C[202] || CT.C202, C[203] || CT.C203, C[204] || CT.C204, C[205] || CT.C205], widget_inspector._Location);
+    },
+    get C200() {
+      return C[200] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[201] || CT.C201,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 149,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C208() {
+      return C[208] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 28,
+        [_Location_line]: 147,
+        [_Location_file]: null
+      });
+    },
+    get C209() {
+      return C[209] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 23,
+        [_Location_line]: 148,
+        [_Location_file]: null
+      });
+    },
+    get C207() {
+      return C[207] = dart.constList([C[208] || CT.C208, C[209] || CT.C209], widget_inspector._Location);
+    },
+    get C206() {
+      return C[206] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[207] || CT.C207,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 145,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C212() {
+      return C[212] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 50,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C211() {
+      return C[211] = dart.constList([C[212] || CT.C212], widget_inspector._Location);
+    },
+    get C210() {
+      return C[210] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[211] || CT.C211,
+        [_Location_name]: null,
+        [_Location_column]: 41,
+        [_Location_line]: 185,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C215() {
+      return C[215] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "borderRadius",
+        [_Location_column]: 51,
+        [_Location_line]: 193,
+        [_Location_file]: null
+      });
+    },
+    get C214() {
+      return C[214] = dart.constList([C[215] || CT.C215], widget_inspector._Location);
+    },
+    get C213() {
+      return C[213] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[214] || CT.C214,
+        [_Location_name]: null,
+        [_Location_column]: 53,
+        [_Location_line]: 192,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C218() {
+      return C[218] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 55,
+        [_Location_line]: 202,
+        [_Location_file]: null
+      });
+    },
+    get C219() {
+      return C[219] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "checkColor",
+        [_Location_column]: 55,
+        [_Location_line]: 203,
+        [_Location_file]: null
+      });
+    },
+    get C220() {
+      return C[220] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "activeColor",
+        [_Location_column]: 55,
+        [_Location_line]: 204,
+        [_Location_file]: null
+      });
+    },
+    get C221() {
+      return C[221] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 55,
+        [_Location_line]: 205,
+        [_Location_file]: null
+      });
+    },
+    get C217() {
+      return C[217] = dart.constList([C[218] || CT.C218, C[219] || CT.C219, C[220] || CT.C220, C[221] || CT.C221], widget_inspector._Location);
+    },
+    get C216() {
+      return C[216] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[217] || CT.C217,
+        [_Location_name]: null,
+        [_Location_column]: 57,
+        [_Location_line]: 201,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C224() {
+      return C[224] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 51,
+        [_Location_line]: 199,
+        [_Location_file]: null
+      });
+    },
+    get C225() {
+      return C[225] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 51,
+        [_Location_line]: 200,
+        [_Location_file]: null
+      });
+    },
+    get C223() {
+      return C[223] = dart.constList([C[224] || CT.C224, C[225] || CT.C225], widget_inspector._Location);
+    },
+    get C222() {
+      return C[222] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[223] || CT.C223,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 197,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C228() {
+      return C[228] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 37,
+        [_Location_line]: 215,
+        [_Location_file]: null
+      });
+    },
+    get C229() {
+      return C[229] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 37,
+        [_Location_line]: 216,
+        [_Location_file]: null
+      });
+    },
+    get C227() {
+      return C[227] = dart.constList([C[228] || CT.C228, C[229] || CT.C229], widget_inspector._Location);
+    },
+    get C226() {
+      return C[226] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[227] || CT.C227,
+        [_Location_name]: null,
+        [_Location_column]: 35,
+        [_Location_line]: 214,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C232() {
+      return C[232] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 48,
+        [_Location_line]: 223,
+        [_Location_file]: null
+      });
+    },
+    get C231() {
+      return C[231] = dart.constList([C[232] || CT.C232], widget_inspector._Location);
+    },
+    get C230() {
+      return C[230] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[231] || CT.C231,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 223,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C235() {
+      return C[235] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 40,
+        [_Location_line]: 234,
+        [_Location_file]: null
+      });
+    },
+    get C236() {
+      return C[236] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 40,
+        [_Location_line]: 235,
+        [_Location_file]: null
+      });
+    },
+    get C234() {
+      return C[234] = dart.constList([C[235] || CT.C235, C[236] || CT.C236], widget_inspector._Location);
+    },
+    get C233() {
+      return C[233] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[234] || CT.C234,
+        [_Location_name]: null,
+        [_Location_column]: 47,
+        [_Location_line]: 233,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C239() {
+      return C[239] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 45,
+        [_Location_line]: 229,
+        [_Location_file]: null
+      });
+    },
+    get C240() {
+      return C[240] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 40,
+        [_Location_line]: 233,
+        [_Location_file]: null
+      });
+    },
+    get C238() {
+      return C[238] = dart.constList([C[239] || CT.C239, C[240] || CT.C240], widget_inspector._Location);
+    },
+    get C237() {
+      return C[237] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[238] || CT.C238,
+        [_Location_name]: null,
+        [_Location_column]: 50,
+        [_Location_line]: 228,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C243() {
+      return C[243] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 41,
+        [_Location_line]: 227,
+        [_Location_file]: null
+      });
+    },
+    get C244() {
+      return C[244] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 43,
+        [_Location_line]: 228,
+        [_Location_file]: null
+      });
+    },
+    get C242() {
+      return C[242] = dart.constList([C[243] || CT.C243, C[244] || CT.C244], widget_inspector._Location);
+    },
+    get C241() {
+      return C[241] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[242] || CT.C242,
+        [_Location_name]: null,
+        [_Location_column]: 37,
+        [_Location_line]: 225,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C247() {
+      return C[247] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 47,
+        [_Location_line]: 191,
+        [_Location_file]: null
+      });
+    },
+    get C246() {
+      return C[246] = dart.constList([C[247] || CT.C247], widget_inspector._Location);
+    },
+    get C245() {
+      return C[245] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[246] || CT.C246,
+        [_Location_name]: null,
+        [_Location_column]: 52,
+        [_Location_line]: 190,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C250() {
+      return C[250] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 45,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C251() {
+      return C[251] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 45,
+        [_Location_line]: 190,
+        [_Location_file]: null
+      });
+    },
+    get C249() {
+      return C[249] = dart.constList([C[250] || CT.C250, C[251] || CT.C251], widget_inspector._Location);
+    },
+    get C248() {
+      return C[248] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[249] || CT.C249,
+        [_Location_name]: null,
+        [_Location_column]: 44,
+        [_Location_line]: 187,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C254() {
+      return C[254] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 34,
+        [_Location_line]: 251,
+        [_Location_file]: null
+      });
+    },
+    get C253() {
+      return C[253] = dart.constList([C[254] || CT.C254], widget_inspector._Location);
+    },
+    get C252() {
+      return C[252] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[253] || CT.C253,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 251,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C257() {
+      return C[257] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 38,
+        [_Location_line]: 277,
+        [_Location_file]: null
+      });
+    },
+    get C258() {
+      return C[258] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 38,
+        [_Location_line]: 278,
+        [_Location_file]: null
+      });
+    },
+    get C256() {
+      return C[256] = dart.constList([C[257] || CT.C257, C[258] || CT.C258], widget_inspector._Location);
+    },
+    get C255() {
+      return C[255] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[256] || CT.C256,
+        [_Location_name]: null,
+        [_Location_column]: 42,
+        [_Location_line]: 276,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C261() {
+      return C[261] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 35,
+        [_Location_line]: 271,
+        [_Location_file]: null
+      });
+    },
+    get C262() {
+      return C[262] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 35,
+        [_Location_line]: 276,
+        [_Location_file]: null
+      });
+    },
+    get C260() {
+      return C[260] = dart.constList([C[261] || CT.C261, C[262] || CT.C262], widget_inspector._Location);
+    },
+    get C259() {
+      return C[259] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[260] || CT.C260,
+        [_Location_name]: null,
+        [_Location_column]: 42,
+        [_Location_line]: 270,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C265() {
+      return C[265] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 35,
+        [_Location_line]: 270,
+        [_Location_file]: null
+      });
+    },
+    get C264() {
+      return C[264] = dart.constList([C[265] || CT.C265], widget_inspector._Location);
+    },
+    get C263() {
+      return C[263] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[264] || CT.C264,
+        [_Location_name]: null,
+        [_Location_column]: 38,
+        [_Location_line]: 268,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C268() {
+      return C[268] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 27,
+        [_Location_line]: 253,
+        [_Location_file]: null
+      });
+    },
+    get C269() {
+      return C[269] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 26,
+        [_Location_line]: 254,
+        [_Location_file]: null
+      });
+    },
+    get C270() {
+      return C[270] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 28,
+        [_Location_line]: 256,
+        [_Location_file]: null
+      });
+    },
+    get C271() {
+      return C[271] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 31,
+        [_Location_line]: 268,
+        [_Location_file]: null
+      });
+    },
+    get C267() {
+      return C[267] = dart.constList([C[268] || CT.C268, C[269] || CT.C269, C[270] || CT.C270, C[271] || CT.C271], widget_inspector._Location);
+    },
+    get C266() {
+      return C[266] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[267] || CT.C267,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 252,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C274() {
+      return C[274] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C275() {
+      return C[275] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C276() {
+      return C[276] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C273() {
+      return C[273] = dart.constList([C[274] || CT.C274, C[275] || CT.C275, C[276] || CT.C276], widget_inspector._Location);
+    },
+    get C272() {
+      return C[272] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[273] || CT.C273,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C279() {
+      return C[279] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 11,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C280() {
+      return C[280] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C281() {
+      return C[281] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C278() {
+      return C[278] = dart.constList([C[279] || CT.C279, C[280] || CT.C280, C[281] || CT.C281], widget_inspector._Location);
+    },
+    get C277() {
+      return C[277] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[278] || CT.C278,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C284() {
+      return C[284] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C285() {
+      return C[285] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C283() {
+      return C[283] = dart.constList([C[284] || CT.C284, C[285] || CT.C285], widget_inspector._Location);
+    },
+    get C282() {
+      return C[282] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[283] || CT.C283,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C288() {
+      return C[288] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C287() {
+      return C[287] = dart.constList([C[288] || CT.C288], widget_inspector._Location);
+    },
+    get C286() {
+      return C[286] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[287] || CT.C287,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/text.dart"
+      });
+    },
+    get C291() {
+      return C[291] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "image",
+        [_Location_column]: 19,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C290() {
+      return C[290] = dart.constList([C[291] || CT.C291], widget_inspector._Location);
+    },
+    get C289() {
+      return C[289] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[290] || CT.C290,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C294() {
+      return C[294] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 17,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C295() {
+      return C[295] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C293() {
+      return C[293] = dart.constList([C[294] || CT.C294, C[295] || CT.C295], widget_inspector._Location);
+    },
+    get C292() {
+      return C[292] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[293] || CT.C293,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C298() {
+      return C[298] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 24,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C297() {
+      return C[297] = dart.constList([C[298] || CT.C298], widget_inspector._Location);
+    },
+    get C296() {
+      return C[296] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[297] || CT.C297,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C301() {
+      return C[301] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C302() {
+      return C[302] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C300() {
+      return C[300] = dart.constList([C[301] || CT.C301, C[302] || CT.C302], widget_inspector._Location);
+    },
+    get C299() {
+      return C[299] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[300] || CT.C300,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C305() {
+      return C[305] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 17,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C306() {
+      return C[306] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C304() {
+      return C[304] = dart.constList([C[305] || CT.C305, C[306] || CT.C306], widget_inspector._Location);
+    },
+    get C303() {
+      return C[303] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[304] || CT.C304,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C309() {
+      return C[309] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 26,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C308() {
+      return C[308] = dart.constList([C[309] || CT.C309], widget_inspector._Location);
+    },
+    get C307() {
+      return C[307] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[308] || CT.C308,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C312() {
+      return C[312] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 23,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C311() {
+      return C[311] = dart.constList([C[312] || CT.C312], widget_inspector._Location);
+    },
+    get C310() {
+      return C[310] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[311] || CT.C311,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C315() {
+      return C[315] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C314() {
+      return C[314] = dart.constList([C[315] || CT.C315], widget_inspector._Location);
+    },
+    get C313() {
+      return C[313] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[314] || CT.C314,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 48,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C318() {
+      return C[318] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C319() {
+      return C[319] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C320() {
+      return C[320] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C317() {
+      return C[317] = dart.constList([C[318] || CT.C318, C[319] || CT.C319, C[320] || CT.C320], widget_inspector._Location);
+    },
+    get C316() {
+      return C[316] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[317] || CT.C317,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C323() {
+      return C[323] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C324() {
+      return C[324] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 11,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C325() {
+      return C[325] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C322() {
+      return C[322] = dart.constList([C[323] || CT.C323, C[324] || CT.C324, C[325] || CT.C325], widget_inspector._Location);
+    },
+    get C321() {
+      return C[321] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[322] || CT.C322,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C328() {
+      return C[328] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C327() {
+      return C[327] = dart.constList([C[328] || CT.C328], widget_inspector._Location);
+    },
+    get C326() {
+      return C[326] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[327] || CT.C327,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 20,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C331() {
+      return C[331] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C330() {
+      return C[330] = dart.constList([C[331] || CT.C331], widget_inspector._Location);
+    },
+    get C329() {
+      return C[329] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[330] || CT.C330,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/SignIn.dart"
+      });
+    },
+    get C333() {
+      return C[333] = dart.constList([], widget_inspector._Location);
+    },
+    get C332() {
+      return C[332] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[333] || CT.C333,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C336() {
+      return C[336] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C337() {
+      return C[337] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "debugShowCheckedModeBanner",
+        [_Location_column]: 7,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C338() {
+      return C[338] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 7,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C335() {
+      return C[335] = dart.constList([C[336] || CT.C336, C[337] || CT.C337, C[338] || CT.C338], widget_inspector._Location);
+    },
+    get C334() {
+      return C[334] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[335] || CT.C335,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 16,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C339() {
+      return C[339] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[333] || CT.C333,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C342() {
+      return C[342] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C343() {
+      return C[343] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "debugShowCheckedModeBanner",
+        [_Location_column]: 7,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C344() {
+      return C[344] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 7,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C341() {
+      return C[341] = dart.constList([C[342] || CT.C342, C[343] || CT.C343, C[344] || CT.C344], widget_inspector._Location);
+    },
+    get C340() {
+      return C[340] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[341] || CT.C341,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 44,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C345() {
+      return C[345] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[333] || CT.C333,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 8,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C348() {
+      return C[348] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 3,
+        [_Location_line]: 8,
+        [_Location_file]: null
+      });
+    },
+    get C347() {
+      return C[347] = dart.constList([C[348] || CT.C348], widget_inspector._Location);
+    },
+    get C346() {
+      return C[346] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[347] || CT.C347,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 7,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C349() {
+      return C[349] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[333] || CT.C333,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    },
+    get C352() {
+      return C[352] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C353() {
+      return C[353] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "debugShowCheckedModeBanner",
+        [_Location_column]: 7,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C354() {
+      return C[354] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 7,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C351() {
+      return C[351] = dart.constList([C[352] || CT.C352, C[353] || CT.C353, C[354] || CT.C354], widget_inspector._Location);
+    },
+    get C350() {
+      return C[350] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[351] || CT.C351,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/tran9/demo/lib/main.dart"
+      });
+    }
+  }, false);
+  var C = Array(355).fill(void 0);
+  var I = [
+    "package:demo/loginScreen.dart",
+    "package:demo/text.dart",
+    "package:demo/SignIn.dart",
+    "package:demo/main.dart"
+  ];
+  loginScreen.LoginScreen = class LoginScreen extends framework.StatefulWidget {
+    createState() {
+      return new loginScreen._LoginScreenStage.new();
+    }
+  };
+  (loginScreen.LoginScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    loginScreen.LoginScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = loginScreen.LoginScreen.prototype;
+  dart.addTypeTests(loginScreen.LoginScreen);
+  dart.addTypeCaches(loginScreen.LoginScreen);
+  dart.setMethodSignature(loginScreen.LoginScreen, () => ({
+    __proto__: dart.getMethods(loginScreen.LoginScreen.__proto__),
+    createState: dart.fnType(loginScreen._LoginScreenStage, [])
+  }));
+  dart.setLibraryUri(loginScreen.LoginScreen, I[0]);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  loginScreen._LoginScreenStage = class _LoginScreenStage extends framework.State$(loginScreen.LoginScreen) {
+    buildEmail() {
+      return new widget_email.WidgetEmail.new({email: "Email", $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+    }
+    buirememberme() {
+      return new container.Container.new({height: 20.0, child: new basic.Row.new({children: T.JSArrayOfWidget().of([new theme.Theme.new({data: theme_data.ThemeData.new({unselectedWidgetColor: colors.Colors.white}), child: new checkbox.Checkbox.new({value: this.isRememberme, checkColor: colors.Colors.green, activeColor: colors.Colors.white, onChanged: dart.fn(value => {
+                  this.setState(dart.fn(() => {
+                    this.isRememberme = dart.nullCheck(value);
+                  }, T.VoidTovoid()));
+                }, T.boolNTovoid()), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), new text.Text.new(" remember me", {style: new text_style.TextStyle.new({color: colors.Colors.white, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13})]), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20});
+    }
+    buildloginBTN() {
+      return new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({vertical: 15.0}), width: 1 / 0, color: colors.Colors.white, child: new basic.Center.new({child: new ink_well.InkWell.new({onTap: dart.fn(() => {
+              core.print(" Login pressed");
+            }, T.VoidTovoid()), child: new basic.Center.new({child: new text.Text.new(" Login ", {style: new text_style.TextStyle.new({color: new ui.Color.new(4284137870), fontSize: 18.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[31] || CT.C31}), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38});
+    }
+    buiSignBTN() {
+      return new gesture_detector.GestureDetector.new({onTap: dart.fn(() => core.print("Sign up pressed"), T.VoidTovoid()), child: new basic.RichText.new({text: new text_span.TextSpan.new({children: T.JSArrayOfInlineSpan().of([new text_span.TextSpan.new({text: " don't have an Account ?", style: new text_style.TextStyle.new({color: colors.Colors.white, fontSize: 18.0, fontWeight: ui.FontWeight.w500})}), new text_span.TextSpan.new({text: " Sogn Up", style: new text_style.TextStyle.new({color: colors.Colors.white, fontWeight: ui.FontWeight.bold})})])}), $creationLocationd_0dea112b090073317d4: C[44] || CT.C44}), $creationLocationd_0dea112b090073317d4: C[47] || CT.C47});
+    }
+    buiforgotpass() {
+      return new container.Container.new({alignment: alignment.Alignment.centerRight, child: new ink_well.InkWell.new({onTap: dart.fn(() => {
+            core.print("Forgot password pressed");
+          }, T.VoidTovoid()), child: new text.Text.new(" Forgot password ? ", {style: new text_style.TextStyle.new({color: colors.Colors.white, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[51] || CT.C51}), $creationLocationd_0dea112b090073317d4: C[55] || CT.C55}), $creationLocationd_0dea112b090073317d4: C[59] || CT.C59});
+    }
+    builpassword() {
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new text.Text.new("password", {style: new text_style.TextStyle.new({color: colors.Colors.black54, fontSize: 16.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[63] || CT.C63}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[67] || CT.C67}), new container.Container.new({alignment: alignment.Alignment.centerLeft, decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.white, borderRadius: new border_radius.BorderRadius.circular(10.0), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.black12, blurRadius: 6.0, offset: new ui.Offset.new(0.0, 16.0)})])}), height: 60.0, child: new text_field.TextField.new({obscureText: true, style: new text_style.TextStyle.new({color: colors.Colors.black54}), decoration: new input_decorator.InputDecoration.new({border: input_border.InputBorder.none, contentPadding: new edge_insets.EdgeInsets.only({top: 14.0}), prefixIcon: new icon.Icon.new(icons.Icons.lock, {color: new ui.Color.new(4284137870), $creationLocationd_0dea112b090073317d4: C[70] || CT.C70}), hintText: "password", hintStyle: new text_style.TextStyle.new({color: colors.Colors.black38})}), $creationLocationd_0dea112b090073317d4: C[74] || CT.C74}), $creationLocationd_0dea112b090073317d4: C[79] || CT.C79})]), $creationLocationd_0dea112b090073317d4: C[85] || CT.C85});
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({body: new (T.AnnotatedRegionOfSystemUiOverlayStyle()).new({value: system_chrome.SystemUiOverlayStyle.light, child: new gesture_detector.GestureDetector.new({child: new basic.Stack.new({children: T.JSArrayOfWidget().of([new container.Container.new({height: 1 / 0, width: 1 / 0, decoration: new box_decoration.BoxDecoration.new({gradient: new gradient.LinearGradient.new({begin: alignment.Alignment.topCenter, end: alignment.Alignment.bottomCenter, colors: T.JSArrayOfColor().of([new ui.Color.new(1717223822), new ui.Color.new(2572861838), new ui.Color.new(3428499854), new ui.Color.new(4284137870)])})}), child: new single_child_scroll_view.SingleChildScrollView.new({physics: new scroll_physics.AlwaysScrollableScrollPhysics.new(), padding: new edge_insets.EdgeInsets.symmetric({horizontal: 25.0, vertical: 120.0}), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidget().of([new text.Text.new("Sign In", {style: new text_style.TextStyle.new({color: colors.Colors.white, fontSize: 40.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[89] || CT.C89}), new basic.SizedBox.new({height: 50.0, $creationLocationd_0dea112b090073317d4: C[93] || CT.C93}), this.buildEmail(), new basic.SizedBox.new({height: 30.0, $creationLocationd_0dea112b090073317d4: C[96] || CT.C96}), this.builpassword(), new basic.SizedBox.new({height: 30.0, $creationLocationd_0dea112b090073317d4: C[99] || CT.C99}), this.buiforgotpass(), this.buirememberme(), new basic.SizedBox.new({height: 30.0, $creationLocationd_0dea112b090073317d4: C[102] || CT.C102}), this.buildloginBTN(), new basic.SizedBox.new({height: 15.0, $creationLocationd_0dea112b090073317d4: C[105] || CT.C105}), this.buiSignBTN()]), $creationLocationd_0dea112b090073317d4: C[108] || CT.C108}), $creationLocationd_0dea112b090073317d4: C[112] || CT.C112}), $creationLocationd_0dea112b090073317d4: C[117] || CT.C117})]), $creationLocationd_0dea112b090073317d4: C[123] || CT.C123}), $creationLocationd_0dea112b090073317d4: C[126] || CT.C126}), $creationLocationd_0dea112b090073317d4: C[129] || CT.C129}), $creationLocationd_0dea112b090073317d4: C[133] || CT.C133});
+    }
+  };
+  (loginScreen._LoginScreenStage.new = function() {
+    this.isRememberme = false;
+    loginScreen._LoginScreenStage.__proto__.new.call(this);
+    ;
+  }).prototype = loginScreen._LoginScreenStage.prototype;
+  dart.addTypeTests(loginScreen._LoginScreenStage);
+  dart.addTypeCaches(loginScreen._LoginScreenStage);
+  dart.setMethodSignature(loginScreen._LoginScreenStage, () => ({
+    __proto__: dart.getMethods(loginScreen._LoginScreenStage.__proto__),
+    buildEmail: dart.fnType(framework.Widget, []),
+    buirememberme: dart.fnType(framework.Widget, []),
+    buildloginBTN: dart.fnType(framework.Widget, []),
+    buiSignBTN: dart.fnType(framework.Widget, []),
+    buiforgotpass: dart.fnType(framework.Widget, []),
+    builpassword: dart.fnType(framework.Widget, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(loginScreen._LoginScreenStage, I[0]);
+  dart.setFieldSignature(loginScreen._LoginScreenStage, () => ({
+    __proto__: dart.getFields(loginScreen._LoginScreenStage.__proto__),
+    isRememberme: dart.fieldType(core.bool)
+  }));
+  var formKey = dart.privateName(text$, "App.formKey");
+  var username = dart.privateName(text$, "App.username");
+  var Signln = dart.privateName(text$, "App.Signln");
+  var Password = dart.privateName(text$, "App.Password");
+  var LoginLn = dart.privateName(text$, "App.LoginLn");
+  var value$ = dart.privateName(text$, "App.value");
+  text$.App = class App extends framework.StatelessWidget {
+    get formKey() {
+      return this[formKey];
+    }
+    set formKey(value) {
+      super.formKey = value;
+    }
+    get username() {
+      return this[username];
+    }
+    set username(value) {
+      this[username] = value;
+    }
+    get Signln() {
+      return this[Signln];
+    }
+    set Signln(value) {
+      this[Signln] = value;
+    }
+    get Password() {
+      return this[Password];
+    }
+    set Password(value) {
+      this[Password] = value;
+    }
+    get LoginLn() {
+      return this[LoginLn];
+    }
+    set LoginLn(value) {
+      this[LoginLn] = value;
+    }
+    get value() {
+      return this[value$];
+    }
+    set value(value) {
+      this[value$] = value;
+    }
+    build(context) {
+      let body = null;
+      return new scaffold.Scaffold.new({body: new safe_area.SafeArea.new({key: this.formKey, child: new container.Container.new({width: 1 / 0, height: 1 / 0, child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), child: new image.Image.new({image: new image_resolution.AssetImage.new("assets/one.jpg"), $creationLocationd_0dea112b090073317d4: C[136] || CT.C136}), $creationLocationd_0dea112b090073317d4: C[139] || CT.C139}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[143] || CT.C143}), new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), child: new text.Text.new(" Sign In ", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 25.0}), $creationLocationd_0dea112b090073317d4: C[146] || CT.C146}), $creationLocationd_0dea112b090073317d4: C[150] || CT.C150}), new basic.SizedBox.new({height: 15.0, $creationLocationd_0dea112b090073317d4: C[154] || CT.C154}), new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), alignment: alignment.Alignment.centerLeft, decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.black12, borderRadius: new border_radius.BorderRadius.circular(30.0)}), child: new text_form_field.TextFormField.new({decoration: new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.only({top: 12.0}), border: input_border.InputBorder.none, labelText: "Username", labelStyle: new text_style.TextStyle.new({fontSize: 15.0, color: colors.Colors.black}), hintText: this.username, hintStyle: new text_style.TextStyle.new({color: colors.Colors.black87})}), validator: dart.fn(value => {
+                          if (dart.nullCheck(value).length < 4) {
+                            return " enter 4 ";
+                          } else {
+                            return null;
+                          }
+                        }, T.StringNToStringN()), maxLength: 20, $creationLocationd_0dea112b090073317d4: C[157] || CT.C157}), $creationLocationd_0dea112b090073317d4: C[162] || CT.C162})]), $creationLocationd_0dea112b090073317d4: C[168] || CT.C168}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[172] || CT.C172}), new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.end, crossAxisAlignment: flex.CrossAxisAlignment.center, children: T.JSArrayOfWidget().of([new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), alignment: alignment.Alignment.centerLeft, decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.black12, borderRadius: new border_radius.BorderRadius.circular(30.0)}), child: new text_form_field.TextFormField.new({decoration: new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.only({top: 12.0}), border: input_border.InputBorder.none, labelText: "Email", labelStyle: new text_style.TextStyle.new({fontSize: 15.0, color: colors.Colors.black})}), validator: dart.fn(value => {
+                          if (dart.nullCheck(value).length < 4) {
+                            return " enter 4 ";
+                          } else {
+                            return null;
+                          }
+                        }, T.StringNToStringN()), maxLength: 20, $creationLocationd_0dea112b090073317d4: C[175] || CT.C175}), $creationLocationd_0dea112b090073317d4: C[180] || CT.C180})]), $creationLocationd_0dea112b090073317d4: C[186] || CT.C186}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[191] || CT.C191}), new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), alignment: alignment.Alignment.centerLeft, decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.black12, borderRadius: new border_radius.BorderRadius.circular(30.0)}), child: new text_form_field.TextFormField.new({obscureText: true, decoration: new input_decorator.InputDecoration.new({contentPadding: new edge_insets.EdgeInsets.only({top: 12.0}), border: input_border.InputBorder.none, labelText: "Password", labelStyle: new text_style.TextStyle.new({fontSize: 15.0, color: colors.Colors.black}), hintText: this.Password, hintStyle: new text_style.TextStyle.new({color: colors.Colors.black87})}), validator: dart.fn(value => {
+                          if (dart.nullCheck(value).length < 4) {
+                            return " enter 4 ";
+                          } else {
+                            return null;
+                          }
+                        }, T.StringNToStringN()), maxLength: 20, $creationLocationd_0dea112b090073317d4: C[194] || CT.C194}), $creationLocationd_0dea112b090073317d4: C[200] || CT.C200})]), $creationLocationd_0dea112b090073317d4: C[206] || CT.C206}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[210] || CT.C210}), new container.Container.new({height: 20.0, child: new basic.Row.new({children: T.JSArrayOfWidget().of([new basic.ClipRRect.new({borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(15.0)), $creationLocationd_0dea112b090073317d4: C[213] || CT.C213}), new theme.Theme.new({data: theme_data.ThemeData.new({unselectedWidgetColor: colors.Colors.green}), child: new checkbox.Checkbox.new({value: this.value, checkColor: colors.Colors.green, activeColor: colors.Colors.green, onChanged: dart.fn(value => {
+                            this.setState(dart.fn(() => this.value = dart.nullCheck(value), T.VoidTobool()));
+                          }, T.boolNTovoid()), $creationLocationd_0dea112b090073317d4: C[216] || CT.C216}), $creationLocationd_0dea112b090073317d4: C[222] || CT.C222}), new text.Text.new(" Stay Logged In ", {style: new text_style.TextStyle.new({color: colors.Colors.black26, fontWeight: ui.FontWeight.normal}), $creationLocationd_0dea112b090073317d4: C[226] || CT.C226}), new basic.SizedBox.new({width: 50.0, $creationLocationd_0dea112b090073317d4: C[230] || CT.C230}), new container.Container.new({alignment: alignment.Alignment.centerRight, child: new ink_well.InkWell.new({onTap: dart.fn(() => {
+                            core.print("Forgotten Password?");
+                          }, T.VoidTovoid()), child: new text.Text.new(" Forgotten Password? ? ", {style: new text_style.TextStyle.new({color: colors.Colors.black26, fontWeight: ui.FontWeight.normal}), $creationLocationd_0dea112b090073317d4: C[233] || CT.C233}), $creationLocationd_0dea112b090073317d4: C[237] || CT.C237}), $creationLocationd_0dea112b090073317d4: C[241] || CT.C241})]), $creationLocationd_0dea112b090073317d4: C[245] || CT.C245}), $creationLocationd_0dea112b090073317d4: C[248] || CT.C248}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[252] || CT.C252}), new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), padding: new edge_insets.EdgeInsets.symmetric({vertical: 20.0}), decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.green._get(300), borderRadius: new border_radius.BorderRadius.circular(30.0), boxShadow: T.JSArrayOfBoxShadow().of([new box_shadow.BoxShadow.new({color: colors.Colors.green.shade400, blurRadius: 20.0, offset: new ui.Offset.new(0.0, 16.0)})])}), child: new basic.Center.new({child: new ink_well.InkWell.new({onTap: dart.fn(() => {
+                        core.print(" Sign Ln");
+                      }, T.VoidTovoid()), child: new text.Text.new(" Sign Ln ", {style: new text_style.TextStyle.new({color: new ui.Color.new(4294243572), fontSize: 18.0, fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[255] || CT.C255}), $creationLocationd_0dea112b090073317d4: C[259] || CT.C259}), $creationLocationd_0dea112b090073317d4: C[263] || CT.C263}), $creationLocationd_0dea112b090073317d4: C[266] || CT.C266})]), $creationLocationd_0dea112b090073317d4: C[272] || CT.C272}), $creationLocationd_0dea112b090073317d4: C[277] || CT.C277}), $creationLocationd_0dea112b090073317d4: C[282] || CT.C282}), $creationLocationd_0dea112b090073317d4: C[286] || CT.C286});
+    }
+    setState(param0) {
+    }
+  };
+  (text$.App.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[formKey] = T.GlobalKeyOfFormState().new();
+    this[username] = "";
+    this[Signln] = "";
+    this[Password] = "";
+    this[LoginLn] = "";
+    this[value$] = false;
+    text$.App.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = text$.App.prototype;
+  dart.addTypeTests(text$.App);
+  dart.addTypeCaches(text$.App);
+  dart.setMethodSignature(text$.App, () => ({
+    __proto__: dart.getMethods(text$.App.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    setState: dart.fnType(dart.dynamic, [dart.fnType(core.bool, [])])
+  }));
+  dart.setLibraryUri(text$.App, I[1]);
+  dart.setFieldSignature(text$.App, () => ({
+    __proto__: dart.getFields(text$.App.__proto__),
+    formKey: dart.finalFieldType(framework.GlobalKey$(form.FormState)),
+    username: dart.fieldType(core.String),
+    Signln: dart.fieldType(core.String),
+    Password: dart.fieldType(core.String),
+    LoginLn: dart.fieldType(core.String),
+    value: dart.fieldType(core.bool)
+  }));
+  dart.defineLazy(text$.App, {
+    /*text$.App.title*/get title() {
+      return "TextFormField";
+    }
+  }, false);
+  SignIn.SignIn = class SignIn$ extends framework.StatefulWidget {
+    createState() {
+      return new SignIn._SignIn.new();
+    }
+  };
+  (SignIn.SignIn.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    SignIn.SignIn.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = SignIn.SignIn.prototype;
+  dart.addTypeTests(SignIn.SignIn);
+  dart.addTypeCaches(SignIn.SignIn);
+  dart.setMethodSignature(SignIn.SignIn, () => ({
+    __proto__: dart.getMethods(SignIn.SignIn.__proto__),
+    createState: dart.fnType(SignIn._SignIn, [])
+  }));
+  dart.setLibraryUri(SignIn.SignIn, I[2]);
+  SignIn._SignIn = class _SignIn extends framework.State$(SignIn.SignIn) {
+    build(context) {
+      return new scaffold.Scaffold.new({body: new safe_area.SafeArea.new({child: new container.Container.new({height: 1 / 0, width: 1 / 0, child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new container.Container.new({margin: new edge_insets.EdgeInsets.all(20.0), child: new image.Image.new({image: new image_resolution.AssetImage.new("assets/one.jpg"), $creationLocationd_0dea112b090073317d4: C[289] || CT.C289}), $creationLocationd_0dea112b090073317d4: C[292] || CT.C292}), new basic.SizedBox.new({height: 5.0, $creationLocationd_0dea112b090073317d4: C[296] || CT.C296}), new container.Container.new({margin: new edge_insets.EdgeInsets.all(15.0), child: new text.Text.new(" Sign Up ", {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold, fontSize: 25.0}), $creationLocationd_0dea112b090073317d4: C[299] || CT.C299}), $creationLocationd_0dea112b090073317d4: C[303] || CT.C303}), new basic.SizedBox.new({height: 10.0, $creationLocationd_0dea112b090073317d4: C[307] || CT.C307}), new basic.Column.new({children: T.JSArrayOfWidget().of([new text_form_field.TextFormField.new({decoration: new input_decorator.InputDecoration.new({border: new input_border.UnderlineInputBorder.new(), labelText: " First and LastName", labelStyle: new text_style.TextStyle.new({fontSize: 20.0, color: colors.Colors.black})}), $creationLocationd_0dea112b090073317d4: C[310] || CT.C310})]), $creationLocationd_0dea112b090073317d4: C[313] || CT.C313})]), $creationLocationd_0dea112b090073317d4: C[316] || CT.C316}), $creationLocationd_0dea112b090073317d4: C[321] || CT.C321}), $creationLocationd_0dea112b090073317d4: C[326] || CT.C326}), $creationLocationd_0dea112b090073317d4: C[329] || CT.C329});
+    }
+  };
+  (SignIn._SignIn.new = function() {
+    SignIn._SignIn.__proto__.new.call(this);
+    ;
+  }).prototype = SignIn._SignIn.prototype;
+  dart.addTypeTests(SignIn._SignIn);
+  dart.addTypeCaches(SignIn._SignIn);
+  dart.setMethodSignature(SignIn._SignIn, () => ({
+    __proto__: dart.getMethods(SignIn._SignIn.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(SignIn._SignIn, I[2]);
+  main.loginScreen = class loginScreen$ extends framework.StatelessWidget {
+    build(context) {
+      return new app.MaterialApp.new({title: "flutter demo", debugShowCheckedModeBanner: false, home: new loginScreen.LoginScreen.new({$creationLocationd_0dea112b090073317d4: C[332] || CT.C332}), $creationLocationd_0dea112b090073317d4: C[334] || CT.C334});
+    }
+  };
+  (main.loginScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.loginScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.loginScreen.prototype;
+  dart.addTypeTests(main.loginScreen);
+  dart.addTypeCaches(main.loginScreen);
+  dart.setMethodSignature(main.loginScreen, () => ({
+    __proto__: dart.getMethods(main.loginScreen.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(main.loginScreen, I[3]);
+  main.SigbIn = class SigbIn extends framework.StatelessWidget {
+    build(context) {
+      return new app.MaterialApp.new({title: "flutter demo", debugShowCheckedModeBanner: false, home: new SignIn.SignIn.new({$creationLocationd_0dea112b090073317d4: C[339] || CT.C339}), $creationLocationd_0dea112b090073317d4: C[340] || CT.C340});
+    }
+  };
+  (main.SigbIn.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.SigbIn.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.SigbIn.prototype;
+  dart.addTypeTests(main.SigbIn);
+  dart.addTypeCaches(main.SigbIn);
+  dart.setMethodSignature(main.SigbIn, () => ({
+    __proto__: dart.getMethods(main.SigbIn.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(main.SigbIn, I[3]);
+  main.main = function main$() {
+    return binding.runApp(new app.MaterialApp.new({home: new SignIn.SignIn.new({$creationLocationd_0dea112b090073317d4: C[345] || CT.C345}), $creationLocationd_0dea112b090073317d4: C[346] || CT.C346}));
+  };
+  main.build = function build(context) {
+    return new app.MaterialApp.new({title: "flutter demo", debugShowCheckedModeBanner: false, home: new text$.App.new({$creationLocationd_0dea112b090073317d4: C[349] || CT.C349}), $creationLocationd_0dea112b090073317d4: C[350] || CT.C350});
+  };
+  dart.trackLibraries("packages/demo/loginScreen.dart", {
+    "package:demo/loginScreen.dart": loginScreen,
+    "package:demo/text.dart": text$,
+    "package:demo/SignIn.dart": SignIn,
+    "package:demo/main.dart": main
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["loginScreen.dart","text.dart","SignIn.dart","main.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAaqC;IAAmB;;;;;;EACxD;;;;;;;;;;;;;;;AAQI,YAAO,0CAAmB;IAC9B;;AAGE,YAAO,sCACG,aACD,6BACa,wBAChB,2BACQ,iDAAwC,8BACrC,kCACE,+BACY,kCACC,gCACT,QAAC;AAIR,kBAHF,cAAS;AACe,oBAAtB,oBAAoB,eAAL,KAAK;;uJAM3B,kBACE,wBACO,qCACS,iCACS;IAMtC;;AAIE,YAAO,uCACgB,gDAAoB,6BAE3B,4BACP,6BAEA,iCACE;AACkB,cAAvB,WAAM;uCAGD,6BAEA,kBACF,mBACI,qCACE,iBAAM,uBACH,kBACa;IAOjC;;AAGE,YAAO,kDACE,cAAM,WAAM,4CACZ,8BACC,sCACM,4BACR,kCACQ,mCACC,qCACS,+BACJ,kBACa,wBAG3B,kCACQ,mBACC,qCACS,iCACS;IAQrC;;AAIG,YAAO,yCACgB,wCACd,iCACE;AAC2B,YAAhC,WAAM;qCAGD,kBACL,+BACO,qCACS,iCACW;IAMpC;;AAII,YAAO,2CACkC,yCACnB,wBAChB,kBACE,oBACO,qCACS,iCACJ,kBACa,iFAI3B,gCAAiB,iEACjB,wCACuB,4CACT,6CACI,mCACa,wCAAS,kBACzB,2BACP,qCACgB,mCACF,aACJ,kBAAO,KAAE,qBAIjB,aACD,2CACO,aACL,qCACS,qCAGJ,iDACU,+CACS,sCAAU,oBACzB,kBACJ,0BACC,iBAAM,kFAEP,uBACC,qCACK;IAQhC;UAG4B;AACzB,YAAO,kCACC,4DACwB,iDACrB,iDACE,+BACc,wBACjB,sEAGc,gDACA,wCACS,oCACA,0CACR,uBACN,iBAAM,aACL,iBAAM,aACL,iBAAM,aACL,iBAAM,0BAIR,iEACI,iEACW,kDACN,gBACF,gBAGJ,yCAC8B,yCACnB,wBAChB,kBACE,mBACO,qCACS,+BACJ,kBACa,iFAI3B,gCAAiB,iEACjB,mBACA,gCAAiB,iEACjB,qBACA,gCAAiB,iEACjB,sBACA,sBACA,gCAAiB,mEACjB,sBACA,gCAAiB,mEACjB;IAUnB;;;IAvOK,oBAAe;;;EAwOtB;;;;;;;;;;;;;;;;;;;;;;;;;ICpPM;;;;;;IACC;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IAED;;;;;;UAMuB;AACrB;AACJ,YAAO,kCACC,iCACC,qBACE,iEAII,yCAEgC,kDACE,yCAEpB,wBACnB,qCACqB,+BAAI,cACd,4BAEL,oCAAY,6IAGhB,gCAAmB,mEACpB,qCACqB,+BAAI,cACnB,kBAAK,qBAEH,0CACkB,8BACb,kIAKV,gCAAiB,mEACnB,0CAEwC,yCACpB,wBAC9B,qCACuB,+BAAI,kBACC,4CACT,6CACG,qCACa,wCAAS,gBAI9B,mDACgB,yDACoB,sCAAU,gBACpB,0CACT,wBACC,wCACA,aACI,iCAEV,0BACL,qCACK,sCAIK,QAAC;AACV,8BAAS,AAAE,AAAO,eAAd,KAAK,WAAW;AAChB,kCAAO;;AAGT,kCAAO;;6DAGA,6LASb,gCAAiB,mEAE3B,yCACyC,gDACC,0CACpB,wBACd,qCAEuB,+BAAI,kBACA,4CACT,6CACI,qCACa,wCAAS,gBAI9C,mDACgB,yDACoB,sCAAU,gBACpB,0CACT,qBACC,wCACA,aACI,oCAKL,QAAC;AACV,8BAAS,AAAE,AAAO,eAAd,KAAK,WAAW;AAChB,kCAAO;;AAGT,kCAAO;;6DAGA,6LAQV,gCAAiB,mEACvB,0CAE6C,yCAC1B,wBAChB,qCAEuB,+BAAI,kBACE,4CACL,6CACK,qCACe,wCAAS,gBAG9C,oDACO,kBACF,yDACoB,sCAAU,gBACpB,0CACT,wBACC,wCACA,aACI,iCAEV,0BACL,qCACK,sCAGK,QAAC;AACV,8BAAS,AAAE,AAAO,eAAd,KAAK,WAAW;AAChB,kCAAO;;AAET,kCAAO;;6DAGA,6LAKG,gCAAiB,mEAEd,qCAES,aACD,6BACa,wBACZ,uCACyB,mCAAW,uBAAS,qEAIjD,2BAEQ,iDAAwC,8BAExC,kCACK,wBACY,kCACC,gCACT,QAAC;AAIH,4BAHP,cAAS,cACF,aAAa,eAAL,KAAK;yKAO1C,kBACE,4BACO,qCACS,mCACS,qFAKvB,+BAAgB,mEAElB,wCAEyB,wCACZ,iCACE;AACuB,4BAA5B,WAAM;qDAGN,kBACP,mCACO,qCACU,mCACY,2UAc5C,gCAAiB,mEACjB,qCACqB,+BAAI,gBACH,gDAAoB,oBAE3B,6CACG,AAAK,yBAAC,oBACS,wCAAS,kBACtB,2BACR,qCACiB,AAAM,0CACH,cACC,kBAAO,KAAE,oBAK7B,6BAEI,iCACA;AACc,wBAAjB,WAAM;iDAIH,kBACJ,qBACO,qCACE,iBAAM,uBACD,kBACe;IAoB9D;aAEuB;IAAS;;;;IAvS9B,gBAAU;IACT,iBAAW;IACX,eAAS;IACT,iBAAU;IACV,gBAAS;IAEV,eAAQ;;;EAkSZ;;;;;;;;;;;;;;;;;;;MA1SoB,eAAK;YAAG;;;;;ACIH;IAAS;;;;;;EAEpC;;;;;;;;;UAM4B;AACxB,YAAO,kCACC,mCAEG,iEAGE,yCACgC,kDACE,yCACrB,wBAChB,qCACqB,+BAAI,cAChB,4BACE,oCAAW,6IAGtB,gCAAiB,kEACjB,qCACqB,+BAAI,cAChB,kBAAK,qBACL,0CACkB,8BACb,kIAKZ,gCAAiB,mEAEjB,gCACY,wBACR,mDACc,iDACF,wDACG,mCACC,wCACA,aACI;IAWtC;;;;;EAEF;;;;;;;;;UCtD4B;AACxB,YAAO,iCACE,4CACqB,aACtB;IAEV;;;;;;EACF;;;;;;;;;UAqB4B;AACxB,YAAO,iCACE,4CACqB,aACtB;IAEV;;;;;;EACF;;;;;;;;;AA3Ce,0BAAO,+BACd;EACN;8BAkB0B;AACxB,UAAO,iCACE,4CACqB,aACtB;EAEV","file":"../../../../packages/demo/loginScreen.dart.lib.js"}');
+  // Exports:
+  return {
+    loginScreen: loginScreen,
+    text: text$,
+    SignIn: SignIn,
+    main: main
+  };
+}));
+
+//# sourceMappingURL=loginScreen.dart.lib.js.map

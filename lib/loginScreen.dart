@@ -1,12 +1,8 @@
-import 'dart:html';
 import 'dart:ui';
-
-import 'package:demo/main.dart';
+import 'package:demo/widget/widget_email.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/material/flat_button.dart';
 class LoginScreen extends StatefulWidget {
 
 @override
@@ -19,55 +15,7 @@ class _LoginScreenStage extends State<LoginScreen> {
   bool isRememberme = false;
 
 Widget buildEmail(){
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text(
-            'Email',
-            style: TextStyle(
-              color: Colors.black54,
-              fontSize: 16,
-              fontWeight: FontWeight.bold
-
-            )
-          ),
-          SizedBox(height: 10),
-          Container(
-            alignment: Alignment.centerLeft,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 6,
-                    offset: Offset(0,16)
-                  )
-              ]
-            ),
-            height: 60,
-            child: TextField(
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(
-                color: Colors.black87,
-              ),
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                  contentPadding: EdgeInsets.only(top: 14),
-                  prefixIcon: Icon(
-                    Icons.email,
-                    color: Color(0xff5ac18e), 
-                  ),
-                hintText: 'Email',
-                hintStyle: TextStyle(
-                  color: Colors.black38
-                )
-              ),
-              ),
-          )
-        ],  
-    );
+    return WidgetEmail(email: "Email");
 }
 
 Widget buirememberme(){
@@ -257,7 +205,7 @@ Widget builpassword(){
                  )
                  ),
                 child: SingleChildScrollView(
-                  
+                  physics: AlwaysScrollableScrollPhysics(),
                   padding: EdgeInsets.symmetric(
                     horizontal: 25,
                     vertical: 120,
